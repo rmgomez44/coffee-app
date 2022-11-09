@@ -32,7 +32,6 @@ tags = {
 resource "aws_subnet" "Private_Subnet1" {
   vpc_id                  = aws_vpc.Coffee_VPC.id
   cidr_block              = var.privateSubnet1
-  map_public_ip_on_launch = var.mapPublicIP 
   availability_zone       = var.availabilityZone1
 tags = {
    Name = "Private-subnet1"
@@ -42,7 +41,6 @@ tags = {
 resource "aws_subnet" "Private_Subnet2" {
   vpc_id                  = aws_vpc.Coffee_VPC.id
   cidr_block              = var.privateSubnet2
-  map_public_ip_on_launch = var.mapPublicIP 
   availability_zone       = var.availabilityZone2
 tags = {
    Name = "Private-subnet2"
@@ -52,7 +50,6 @@ tags = {
 resource "aws_subnet" "Private_Subnet3" {
   vpc_id                  = aws_vpc.Coffee_VPC.id
   cidr_block              = var.privateSubnet3
-  map_public_ip_on_launch = var.mapPublicIP 
   availability_zone       = var.availabilityZone1
 tags = {
    Name = "Private-subnet3-RDS"
@@ -62,7 +59,6 @@ tags = {
 resource "aws_subnet" "Private_Subnet4" {
   vpc_id                  = aws_vpc.Coffee_VPC.id
   cidr_block              = var.privateSubnet3
-  map_public_ip_on_launch = var.mapPublicIP 
   availability_zone       = var.availabilityZone2
 tags = {
    Name = "Private-subnet4"
@@ -104,3 +100,4 @@ resource "aws_route_table_association" "Public_Subnet2_association" {
   subnet_id      = aws_subnet.Public_Subnet2.id
   route_table_id = aws_route_table.Coffee_VPC_route_table.id
 }
+
