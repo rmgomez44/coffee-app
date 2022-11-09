@@ -55,3 +55,11 @@ variable "egressCIDRblock" {
 variable "mapPublicIP" {
     default = true
 }
+
+variable "rds_admin_pass" {
+    default = "s3cr3tam3nt3"
+}
+
+variable "rds-admin-user" {
+    default = "coffee-admin"
+}
