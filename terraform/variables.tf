@@ -60,6 +60,6 @@ variable "rds_admin_pass" {
     default = "s3cr3tam3nt3"
 }
 
-variable "rds-admin-user" {
+variable "rds_admin_user" {
     default = "coffee-admin"
 }
