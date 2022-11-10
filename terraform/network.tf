@@ -58,7 +58,7 @@ tags = {
 
 resource "aws_subnet" "Private_Subnet4" {
   vpc_id                  = aws_vpc.Coffee_VPC.id
-  cidr_block              = var.privateSubnet3
+  cidr_block              = var.privateSubnet4
   availability_zone       = var.availabilityZone2
 tags = {
    Name = "Private-subnet4"
