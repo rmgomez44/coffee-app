@@ -8,12 +8,12 @@ resource "aws_db_subnet_group" "coffee-rds-db" {
 }
 
 
-resource "aws_db_instance" "default" {
+resource "aws_db_instance" "coffee_rds" {
   allocated_storage    = 10
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
-  db_name              = "coffee-db-app"
+  db_name              = "coffeedbapp"
   username             = var.rds_admin_user
   password             = var.rds_admin_pass
   parameter_group_name = "default.mysql5.7"
